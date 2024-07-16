@@ -1,0 +1,22 @@
+spring:
+    application:
+        name: hotel
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        password: ${MYSQL_PASSWORD}
+        url: jdbc:mysql://localhost:3306/hotel_db?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true
+        username: ${MYSQL_USER}
+    jpa:
+        hibernate:
+            ddl-auto: update
+        open-in-view: true
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+                format_sql: true
+
+   
+cloudinary:
+    cloud_name: danjpzd8z
+    api_key: 759599338768339
+    api_secret: ${SECRET}
